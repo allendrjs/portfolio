@@ -1,0 +1,915 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Geoffrey Allen De Rojas — Full-Stack Developer</title>
+  <meta name="description" content="Full-stack developer working across Java, Python and data. Projects, certifications and design work.">
+
+  <!-- Open Graph: controls how the link previews on LinkedIn, Messenger, etc. -->
+  <meta property="og:title" content="Geoffrey Allen De Rojas">
+  <meta property="og:description" content="Full-stack developer — Java, Python & data.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/img/og-card.png">
+
+  <link rel="icon" href="assets/img/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+
+  <!-- Phase 2 -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<div class="notice" id="notice">
+  <div class="wrap">
+    <p>Preview — the intro paragraph is still my draft wording. Everything else is yours.</p>
+    <button type="button" id="dismiss">Hide</button>
+  </div>
+</div>
+
+<nav>
+  <div class="wrap">
+    <span class="mark">GVR</span>
+    <div class="navlinks">
+      <a href="#stack">Stack</a>
+      <a href="#work">Projects</a>
+      <a href="#design">Design</a>
+      <a href="#experience">Experience</a>
+      <a href="#certificates">Certificates</a>
+      <a href="#about">About</a>
+      <button class="toggle" id="themeBtn" type="button" aria-label="Switch color theme">
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1111.2 3a7 7 0 009.8 9.8z"/></svg>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<header>
+  <div class="wrap">
+    <div class="idrow">
+      <div class="avatar" aria-hidden="true">
+        <svg viewBox="0 0 96 96" role="img">
+          <rect width="96" height="96" fill="#0d0d0f"/>
+          <circle cx="48" cy="48" r="30" fill="none" stroke="#f2f2ef" stroke-width="1"/>
+          <circle cx="48" cy="48" r="21" fill="none" stroke="#f2f2ef" stroke-width="1" opacity=".55"/>
+          <path d="M62 34a20 20 0 100 28" fill="none" stroke="#f2f2ef" stroke-width="5" stroke-linecap="round"/>
+          <path d="M48 48h14v14" fill="none" stroke="#f2f2ef" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <div>
+        <div class="idname">
+          Geoffrey Allen De Rojas
+          <svg class="verified" viewBox="0 0 24 24" fill="currentColor" aria-label="Verified"><path d="M12 1.5l2.4 2.1 3.2-.3.9 3.1 2.8 1.6-1.2 3 1.2 3-2.8 1.6-.9 3.1-3.2-.3L12 22.5l-2.4-2.1-3.2.3-.9-3.1L2.7 16l1.2-3-1.2-3 2.8-1.6.9-3.1 3.2.3z"/><path d="M10.6 15.2l-2.9-2.9 1.3-1.3 1.6 1.6 4-4 1.3 1.3z" fill="#fff"/></svg>
+        </div>
+        <div class="social">
+          <a href="#" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5A11.5 11.5 0 00.5 12a11.5 11.5 0 007.9 10.9c.6.1.8-.2.8-.6v-2c-3.2.7-3.9-1.5-3.9-1.5-.5-1.3-1.3-1.7-1.3-1.7-1-.7.1-.7.1-.7 1.1.1 1.7 1.2 1.7 1.2 1 1.7 2.7 1.2 3.4.9.1-.7.4-1.2.7-1.5-2.6-.3-5.3-1.3-5.3-5.8 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.2 1.2a11 11 0 015.8 0C17.1 4.7 18 5 18 5c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.5-2.7 5.5-5.3 5.8.4.4.8 1.1.8 2.2v3.2c0 .4.2.7.8.6A11.5 11.5 0 0023.5 12 11.5 11.5 0 0012 .5z"/></svg></a>
+          <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 11-.01 5 2.5 2.5 0 01.01-5zM3 9h4v12H3zM9.5 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1V21h-4v-5.4c0-1.3-.02-2.96-1.8-2.96-1.8 0-2.08 1.4-2.08 2.86V21h-4z"/></svg></a>
+          <a href="mailto:geo.villanueva.derojas@gmail.com" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><rect x="2.5" y="4.5" width="19" height="15" rx="2"/><path d="M3 6l9 6.5L21 6"/></svg></a>
+        </div>
+      </div>
+    </div>
+
+    <h1>Full-Stack Developer <span class="sub">— Java, Python &amp; Data</span></h1>
+
+    <p class="bio">
+      I build web and mobile applications with
+      <span class="chip"><i class="art"><img src="assets/img/logos/java.png" alt="" width="19" height="19"></i>Java</span>,
+      <span class="chip"><i style="background:#3776AB"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M14.25.18l.9.2.73.26.59.3.45.32.34.34.25.34.16.33.1.3.04.26.02.2-.01.13V8.5l-.05.63-.13.55-.21.46-.26.38-.3.31-.33.25-.35.19-.35.14-.33.1-.3.07-.26.04-.21.02H8.77l-.69.05-.59.14-.5.22-.41.27-.33.32-.27.35-.2.36-.15.37-.1.35-.07.32-.04.27-.02.21v3.06H3.17l-.21-.03-.28-.07-.32-.12-.35-.18-.36-.26-.36-.36-.35-.46-.32-.59-.28-.73-.21-.88-.14-1.05-.05-1.23.06-1.22.16-1.04.24-.87.32-.71.36-.57.4-.44.42-.33.42-.24.4-.16.36-.1.32-.05.24-.01h.16l.06.01h8.16v-.83H6.18l-.01-2.75-.02-.37.05-.34.11-.31.17-.28.25-.26.31-.23.38-.2.44-.18.51-.15.58-.12.64-.1.71-.06.77-.04.84-.02 1.27.05zm-6.3 1.98l-.23.33-.08.41.08.41.23.34.33.22.41.09.41-.09.33-.22.23-.34.08-.41-.08-.41-.23-.33-.33-.22-.41-.09-.41.09zm13.09 3.95l.28.06.32.12.35.18.36.27.36.35.35.47.32.59.28.73.21.88.14 1.04.05 1.23-.06 1.23-.16 1.04-.24.86-.32.71-.36.57-.4.45-.42.33-.42.24-.4.16-.36.09-.32.05-.24.02-.16-.01h-8.22v.82h5.84l.01 2.76.02.36-.05.34-.11.31-.17.29-.25.25-.31.24-.38.2-.44.17-.51.15-.58.13-.64.09-.71.07-.77.04-.84.01-1.27-.04-1.07-.14-.9-.2-.73-.25-.59-.3-.45-.33-.34-.34-.25-.34-.16-.33-.1-.3-.04-.25-.02-.2.01-.13v-5.34l.05-.64.13-.54.21-.46.26-.38.3-.32.33-.24.35-.2.35-.14.33-.1.3-.06.26-.04.21-.02.13-.01h5.84l.69-.05.59-.14.5-.21.41-.28.33-.32.27-.35.2-.36.15-.36.1-.35.07-.32.04-.28.02-.21V6.07h2.09l.14.01zm-6.47 14.25l-.23.33-.08.41.08.41.23.33.33.23.41.08.41-.08.33-.23.23-.33.08-.41-.08-.41-.23-.33-.33-.23-.41-.08-.41.08z"/></svg></i>Python</span> and
+      <span class="chip"><i class="art"><img src="assets/img/logos/sql.png" alt="" width="19" height="19"></i>SQL</span>,
+      and turn what comes out of them into dashboards people actually read. Comfortable across the
+      whole path — schema, backend, interface, and the chart at the end of it.
+    </p>
+
+    <a class="cta" href="#work">
+      View work
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>
+    </a>
+  </div>
+</header>
+
+<section id="stack">
+  <div class="wrap">
+    <p class="eyebrow">Stack</p>
+    <div class="stacklist">
+      <div class="stackrow">
+        <span class="label">Languages</span>
+        <div class="items">
+          <span class="chip"><i class="art"><img src="assets/img/logos/java.png" alt="" width="19" height="19"></i>Java</span>
+          <span class="chip"><i style="background:#7F52FF"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 24H0V0h24L12 12Z"/></svg></i>Kotlin</span>
+          <span class="chip"><i style="background:#3776AB"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M14.25.18l.9.2.73.26.59.3.45.32.34.34.25.34.16.33.1.3.04.26.02.2-.01.13V8.5l-.05.63-.13.55-.21.46-.26.38-.3.31-.33.25-.35.19-.35.14-.33.1-.3.07-.26.04-.21.02H8.77l-.69.05-.59.14-.5.22-.41.27-.33.32-.27.35-.2.36-.15.37-.1.35-.07.32-.04.27-.02.21v3.06H3.17l-.21-.03-.28-.07-.32-.12-.35-.18-.36-.26-.36-.36-.35-.46-.32-.59-.28-.73-.21-.88-.14-1.05-.05-1.23.06-1.22.16-1.04.24-.87.32-.71.36-.57.4-.44.42-.33.42-.24.4-.16.36-.1.32-.05.24-.01h.16l.06.01h8.16v-.83H6.18l-.01-2.75-.02-.37.05-.34.11-.31.17-.28.25-.26.31-.23.38-.2.44-.18.51-.15.58-.12.64-.1.71-.06.77-.04.84-.02 1.27.05zm-6.3 1.98l-.23.33-.08.41.08.41.23.34.33.22.41.09.41-.09.33-.22.23-.34.08-.41-.08-.41-.23-.33-.33-.22-.41-.09-.41.09zm13.09 3.95l.28.06.32.12.35.18.36.27.36.35.35.47.32.59.28.73.21.88.14 1.04.05 1.23-.06 1.23-.16 1.04-.24.86-.32.71-.36.57-.4.45-.42.33-.42.24-.4.16-.36.09-.32.05-.24.02-.16-.01h-8.22v.82h5.84l.01 2.76.02.36-.05.34-.11.31-.17.29-.25.25-.31.24-.38.2-.44.17-.51.15-.58.13-.64.09-.71.07-.77.04-.84.01-1.27-.04-1.07-.14-.9-.2-.73-.25-.59-.3-.45-.33-.34-.34-.25-.34-.16-.33-.1-.3-.04-.25-.02-.2.01-.13v-5.34l.05-.64.13-.54.21-.46.26-.38.3-.32.33-.24.35-.2.35-.14.33-.1.3-.06.26-.04.21-.02.13-.01h5.84l.69-.05.59-.14.5-.21.41-.28.33-.32.27-.35.2-.36.15-.36.1-.35.07-.32.04-.28.02-.21V6.07h2.09l.14.01zm-6.47 14.25l-.23.33-.08.41.08.41.23.33.33.23.41.08.41-.08.33-.23.23-.33.08-.41-.08-.41-.23-.33-.33-.23-.41-.08-.41.08z"/></svg></i>Python</span>
+          <span class="chip"><i style="background:#777BB4"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7.01 10.207h-.944l-.515 2.648h.838c.556 0 .97-.105 1.242-.314.272-.21.455-.559.55-1.049.092-.47.05-.802-.124-.995-.175-.193-.523-.29-1.047-.29zM12 5.688C5.373 5.688 0 8.514 0 12s5.373 6.313 12 6.313S24 15.486 24 12c0-3.486-5.373-6.312-12-6.312zm-3.26 7.451c-.261.25-.575.438-.917.551-.336.108-.765.164-1.285.164H5.357l-.327 1.681H3.652l1.23-6.326h2.65c.797 0 1.378.209 1.744.628.366.418.476 1.002.33 1.752a2.836 2.836 0 0 1-.305.847c-.143.255-.33.49-.561.703zm4.024.715l.543-2.799c.063-.318.039-.536-.068-.651-.107-.116-.336-.174-.687-.174H11.46l-.704 3.625H9.388l1.23-6.327h1.367l-.327 1.682h1.218c.767 0 1.295.134 1.586.401s.378.7.263 1.299l-.572 2.944h-1.389zm7.597-2.265a2.782 2.782 0 0 1-.305.847c-.143.255-.33.49-.561.703a2.44 2.44 0 0 1-.917.551c-.336.108-.765.164-1.286.164h-1.18l-.327 1.682h-1.378l1.23-6.326h2.649c.797 0 1.378.209 1.744.628.366.417.477 1.001.331 1.751zM17.766 10.207h-.943l-.516 2.648h.838c.557 0 .971-.105 1.242-.314.272-.21.455-.559.551-1.049.092-.47.049-.802-.125-.995s-.524-.29-1.047-.29z"/></svg></i>PHP</span>
+          <span class="chip"><i class="art"><img src="assets/img/logos/sql.png" alt="" width="19" height="19"></i>SQL</span>
+        </div>
+      </div>
+      <div class="stackrow">
+        <span class="label">Web</span>
+        <div class="items">
+          <span class="chip"><i style="background:#E34F26"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M1.5 0h21l-1.91 21.563L11.977 24l-8.564-2.438L1.5 0zm7.031 9.75l-.232-2.718 10.059.003.23-2.622L5.412 4.41l.698 8.01h9.126l-.326 3.426-2.91.804-2.955-.81-.188-2.11H6.248l.33 4.171L12 19.351l5.379-1.443.744-8.157H8.531z"/></svg></i>HTML</span>
+          <span class="chip"><i style="background:#663399"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M0 0v20.16A3.84 3.84 0 0 0 3.84 24h16.32A3.84 3.84 0 0 0 24 20.16V3.84A3.84 3.84 0 0 0 20.16 0Zm14.256 13.08c1.56 0 2.28 1.08 2.304 2.64h-1.608c.024-.288-.048-.6-.144-.84-.096-.192-.288-.264-.552-.264-.456 0-.696.264-.696.84-.024.576.288.888.768 1.08.72.288 1.608.744 1.92 1.296q.432.648.432 1.656c0 1.608-.912 2.592-2.496 2.592-1.656 0-2.4-1.032-2.424-2.688h1.68c0 .792.264 1.176.792 1.176.264 0 .456-.072.552-.24.192-.312.24-1.176-.048-1.512-.312-.408-.912-.6-1.32-.816q-.828-.396-1.224-.936c-.24-.36-.36-.888-.36-1.536 0-1.44.936-2.472 2.424-2.448m5.4 0c1.584 0 2.304 1.08 2.328 2.64h-1.608c0-.288-.048-.6-.168-.84-.096-.192-.264-.264-.528-.264-.48 0-.72.264-.72.84s.288.888.792 1.08c.696.288 1.608.744 1.92 1.296.264.432.408.984.408 1.656.024 1.608-.888 2.592-2.472 2.592-1.68 0-2.424-1.056-2.448-2.688h1.68c0 .744.264 1.176.792 1.176.264 0 .456-.072.552-.24.216-.312.264-1.176-.048-1.512-.288-.408-.888-.6-1.32-.816-.552-.264-.96-.576-1.2-.936s-.36-.888-.36-1.536c-.024-1.44.912-2.472 2.4-2.448m-11.031.018c.711-.006 1.419.198 1.839.63.432.432.672 1.128.648 1.992H9.336c.024-.456-.096-.792-.432-.96-.312-.144-.768-.048-.888.24-.12.264-.192.576-.168.864v3.504c0 .744.264 1.128.768 1.128a.65.65 0 0 0 .552-.264c.168-.24.192-.552.168-.84h1.776c.096 1.632-.984 2.712-2.568 2.688-1.536 0-2.496-.864-2.472-2.472v-4.032c0-.816.24-1.44.696-1.848.432-.408 1.146-.624 1.857-.63"/></svg></i>CSS</span>
+          <span class="chip"><i class="on-light" style="background:#F7DF1E"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M0 0h24v24H0V0zm22.034 18.276c-.175-1.095-.888-2.015-3.003-2.873-.736-.345-1.554-.585-1.797-1.14-.091-.33-.105-.51-.046-.705.15-.646.915-.84 1.515-.66.39.12.75.42.976.9 1.034-.676 1.034-.676 1.755-1.125-.27-.42-.404-.601-.586-.78-.63-.705-1.469-1.065-2.834-1.034l-.705.089c-.676.165-1.32.525-1.71 1.005-1.14 1.291-.811 3.541.569 4.471 1.365 1.02 3.361 1.244 3.616 2.205.24 1.17-.87 1.545-1.966 1.41-.811-.18-1.26-.586-1.755-1.336l-1.83 1.051c.21.48.45.689.81 1.109 1.74 1.756 6.09 1.666 6.871-1.004.029-.09.24-.705.074-1.65l.046.067zm-8.983-7.245h-2.248c0 1.938-.009 3.864-.009 5.805 0 1.232.063 2.363-.138 2.711-.33.689-1.18.601-1.566.48-.396-.196-.597-.466-.83-.855-.063-.105-.11-.196-.127-.196l-1.825 1.125c.305.63.75 1.172 1.324 1.517.855.51 2.004.675 3.207.405.783-.226 1.458-.691 1.811-1.411.51-.93.402-2.07.397-3.346.012-2.054 0-4.109 0-6.179l.004-.056z"/></svg></i>JavaScript</span>
+        </div>
+      </div>
+      <div class="stackrow">
+        <span class="label">Tools</span>
+        <div class="items">
+          <span class="chip"><i style="background:#0078D4"><svg viewBox="0 0 100 100" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M70.9119 99.3171C72.4869 99.9307 74.2828 99.8914 75.8725 99.1264L96.4608 89.2197C98.6242 88.1787 100 85.9892 100 83.5872V16.4133C100 14.0113 98.6243 11.8218 96.4609 10.7808L75.8725 0.873756C73.7862 -0.130129 71.3446 0.11576 69.5135 1.44695C69.252 1.63711 69.0028 1.84943 68.769 2.08341L29.3551 38.0415L12.1872 25.0096C10.589 23.7965 8.35363 23.8959 6.86933 25.2461L1.36303 30.2549C-0.452552 31.9064 -0.454633 34.7627 1.35853 36.417L16.2471 50.0001L1.35853 63.5832C-0.454633 65.2374 -0.452552 68.0938 1.36303 69.7453L6.86933 74.7541C8.35363 76.1043 10.589 76.2037 12.1872 74.9905L29.3551 61.9587L68.769 97.9167C69.3925 98.5406 70.1246 99.0104 70.9119 99.3171ZM75.0152 27.2989L45.1091 50.0001L75.0152 72.7012V27.2989Z"/></svg></i>VS Code</span>
+          <span class="chip"><i class="tile-ink"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M0 0v24h24V0zm3.723 3.111h5v1.834h-1.39v6.277h1.39v1.834h-5v-1.834h1.444V4.945H3.723zm11.055 0H17v6.5c0 .612-.055 1.111-.222 1.556-.167.444-.39.777-.723 1.11-.277.279-.666.557-1.11.668a3.933 3.933 0 0 1-1.445.278c-.778 0-1.444-.167-1.944-.445a4.81 4.81 0 0 1-1.279-1.056l1.39-1.555c.277.334.555.555.833.722.277.167.611.278.945.278.389 0 .721-.111 1-.389.221-.278.333-.667.333-1.278zM2.222 19.5h9V21h-9z"/></svg></i>IntelliJ IDEA</span>
+          <span class="chip"><i class="on-light" style="background:#3DDC84"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.2693 10.3368c-.3321 0-.6026.2705-.6026.6031v9.8324h-1.7379l-3.3355-6.9396c.476-.5387.6797-1.286.5243-2.0009a2.2862 2.2862 0 0 0-1.2893-1.6248v-.8124c.0121-.2871-.1426-.5787-.4043-.7407-.1391-.0825-.2884-.1234-.4402-.1234a.8478.8478 0 0 0-.4318.1182c-.2701.1671-.4248.4587-.4123.7662l-.0003.721c-1.0149.3668-1.6619 1.4153-1.4867 2.5197a2.282 2.282 0 0 0 .5916 1.2103l-3.2096 6.9064H4.0928c-1.0949-.007-1.9797-.8948-1.9832-1.9896V5.016c-.0055 1.1024.8836 2.0006 1.9859 2.0062a2.024 2.024 0 0 0 .1326-.0037h14.7453s2.5343-.2189 2.8619 1.5392c-.2491.0287-.4449.2321-.4449.4889 0 .7115-.5791 1.2901-1.3028 1.2901h-.8183zM17.222 22.5366c.2347.4837.0329 1.066-.4507 1.3007-.1296.0629-.2666.0895-.4018.0927a.9738.9738 0 0 1-.3194-.0455c-.024-.0078-.046-.0209-.0694-.0305a.9701.9701 0 0 1-.2277-.1321c-.0247-.0192-.0495-.038-.0724-.0598-.0825-.0783-.1574-.1672-.21-.2757l-1.2554-2.6143-1.5585-3.2452a.7725.7725 0 0 0-.6995-.4443h-.0024a.792.792 0 0 0-.7083.4443l-1.5109 3.2452-1.2321 2.6464a.9722.9722 0 0 1-.7985.5795c-.0626.0053-.1238-.0024-.185-.0087-.0344-.0036-.069-.0053-.1025-.0124-.0489-.0103-.0954-.0278-.142-.0452-.0301-.0113-.0613-.0197-.0901-.0339-.0496-.0244-.0948-.0565-.1397-.0889-.0217-.0156-.0457-.0275-.0662-.045a.9862.9862 0 0 1-.1695-.1844.9788.9788 0 0 1-.0708-.9852l.8469-1.8223 3.2676-7.0314a1.7964 1.7964 0 0 1-.7072-1.1637c-.1555-.9799.5129-1.9003 1.4928-2.0559V9.3946a.3542.3542 0 0 1 .1674-.3155.3468.3468 0 0 1 .3541 0 .354.354 0 0 1 .1674.3155v1.159l.0129.0064a1.8028 1.8028 0 0 1 1.2878 1.378 1.7835 1.7835 0 0 1-.6439 1.7836l3.3889 7.0507.8481 1.7643zM12.9841 12.306c.0042-.6081-.4854-1.1044-1.0935-1.1085a1.1204 1.1204 0 0 0-.7856.3219 1.101 1.101 0 0 0-.323.7716c-.0042.6081.4854 1.1044 1.0935 1.1085h.0077c.6046 0 1.0967-.488 1.1009-1.0935zm-1.027 5.2768c-.1119.0005-.2121.0632-.2571.1553l-1.4127 3.0342h3.3733l-1.4564-3.0328a.274.274 0 0 0-.2471-.1567zm8.1432-6.7459l-.0129-.0001h-.8177a.103.103 0 0 0-.103.103v12.9103a.103.103 0 0 0 .0966.103h.8435c.9861-.0035 1.7836-.804 1.7836-1.79V9.0468c0 .9887-.8014 1.7901-1.7901 1.7901zM2.6098 5.0161v.019c.0039.816.6719 1.483 1.4874 1.4869a12.061 12.061 0 0 1 .1309-.0034h1.1286c.1972-1.315.7607-2.525 1.638-3.4859H4.0993c-.9266.0031-1.6971.6401-1.9191 1.4975.2417.0355.4296.235.4296.4859zm6.3381-2.8977L7.9112.3284a.219.219 0 0 1 0-.2189A.2384.2384 0 0 1 8.098 0a.219.219 0 0 1 .1867.1094l1.0496 1.8158a6.4907 6.4907 0 0 1 5.3186 0L15.696.1094a.2189.2189 0 0 1 .3734.2189l-1.0302 1.79c1.6671.9125 2.7974 2.5439 3.0975 4.4018l-12.286-.0014c.3004-1.8572 1.4305-3.488 3.0972-4.4003zm5.3774 2.6202a.515.515 0 0 0 .5271.5028.515.515 0 0 0 .5151-.5151.5213.5213 0 0 0-.8885-.367.5151.5151 0 0 0-.1537.3793zm-5.7178-.0067a.5151.5151 0 0 0 .5207.5095.5086.5086 0 0 0 .367-.1481.5215.5215 0 1 0-.734-.7341.515.515 0 0 0-.1537.3727z"/></svg></i>Android Studio</span>
+          <span class="chip"><i style="background:#F03C2E"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.09 23.549a1.54 1.54 0 0 1-2.18 0L.451 13.089a1.54 1.54 0 0 1 0-2.179l7.191-7.19 2.733 2.733a1.85 1.85 0 0 0 .964 2.326v6.66a1.849 1.849 0 1 0 1.54 0V8.957l2.508 2.508a1.85 1.85 0 1 0 1.09-1.09l-2.634-2.634a1.85 1.85 0 0 0-2.378-2.377L8.73 2.63 10.91.451a1.54 1.54 0 0 1 2.179 0l10.459 10.46a1.54 1.54 0 0 1 0 2.179z"/></svg></i>Git</span>
+          <span class="chip"><i class="tile-ink"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></i>GitHub</span>
+          <span class="chip"><i style="background:#2496ED"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.983 11.078h2.119a.186.186 0 00.186-.185V9.006a.186.186 0 00-.186-.186h-2.119a.185.185 0 00-.185.185v1.888c0 .102.083.185.185.185m-2.954-5.43h2.118a.186.186 0 00.186-.186V3.574a.186.186 0 00-.186-.185h-2.118a.185.185 0 00-.185.185v1.888c0 .102.082.185.185.185m0 2.716h2.118a.187.187 0 00.186-.186V6.29a.186.186 0 00-.186-.185h-2.118a.185.185 0 00-.185.185v1.887c0 .102.082.185.185.186m-2.93 0h2.12a.186.186 0 00.184-.186V6.29a.185.185 0 00-.185-.185H8.1a.185.185 0 00-.185.185v1.887c0 .102.083.185.185.186m-2.964 0h2.119a.186.186 0 00.185-.186V6.29a.185.185 0 00-.185-.185H5.136a.186.186 0 00-.186.185v1.887c0 .102.084.185.186.186m5.893 2.715h2.118a.186.186 0 00.186-.185V9.006a.186.186 0 00-.186-.186h-2.118a.185.185 0 00-.185.185v1.888c0 .102.082.185.185.185m-2.93 0h2.12a.185.185 0 00.184-.185V9.006a.185.185 0 00-.184-.186h-2.12a.185.185 0 00-.184.185v1.888c0 .102.083.185.185.185m-2.964 0h2.119a.185.185 0 00.185-.185V9.006a.185.185 0 00-.184-.186h-2.12a.186.186 0 00-.186.186v1.887c0 .102.084.185.186.185m-2.92 0h2.12a.185.185 0 00.184-.185V9.006a.185.185 0 00-.184-.186h-2.12a.185.185 0 00-.184.185v1.888c0 .102.082.185.185.185M23.763 9.89c-.065-.051-.672-.51-1.954-.51-.338.001-.676.03-1.01.087-.248-1.7-1.653-2.53-1.716-2.566l-.344-.199-.226.327c-.284.438-.49.922-.612 1.43-.23.97-.09 1.882.403 2.661-.595.332-1.55.413-1.744.42H.751a.751.751 0 00-.75.748 11.376 11.376 0 00.692 4.062c.545 1.428 1.355 2.48 2.41 3.124 1.18.723 3.1 1.137 5.275 1.137.983.003 1.963-.086 2.93-.266a12.248 12.248 0 003.823-1.389c.98-.567 1.86-1.288 2.61-2.136 1.252-1.418 1.998-2.997 2.553-4.4h.221c1.372 0 2.215-.549 2.68-1.009.309-.293.55-.65.707-1.046l.098-.288Z"/></svg></i>Docker</span>
+          <span class="chip"><i class="art"><img src="assets/img/logos/sql-developer.png" alt="" width="19" height="19"></i>SQL Developer</span>
+        </div>
+      </div>
+      <div class="stackrow">
+        <span class="label">Data &amp; docs</span>
+        <div class="items">
+          <span class="chip"><i style="background:#150458"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.922 0h2.623v18.104h-2.623zm-4.126 12.94h2.623v2.57h-2.623zm0-7.037h2.623v5.446h-2.623zm0 11.197h2.623v5.446h-2.623zM4.456 5.896h2.622V24H4.455zm4.213 2.559h2.623v2.57H8.67zm0 4.151h2.623v5.447H8.67zm0-11.187h2.623v5.446H8.67Z"/></svg></i>pandas</span>
+          <span class="chip"><i class="art"><img src="assets/img/logos/tableau.png" alt="" width="19" height="19"></i>Tableau</span>
+          <span class="chip"><i class="art"><img src="assets/img/logos/excel.png" alt="" width="19" height="19"></i>Excel</span>
+          <span class="chip"><i style="background:#34A853"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M11.318 12.545H7.91v-1.909h3.41v1.91zM14.728 0v6h6l-6-6zm1.363 10.636h-3.41v1.91h3.41v-1.91zm0 3.273h-3.41v1.91h3.41v-1.91zM20.727 6.5v15.864c0 .904-.732 1.636-1.636 1.636H4.909a1.636 1.636 0 0 1-1.636-1.636V1.636C3.273.732 4.005 0 4.909 0h9.318v6.5h6.5zm-3.273 2.773H6.545v7.909h10.91v-7.91zm-6.136 4.636H7.91v1.91h3.41v-1.91z"/></svg></i>Google Sheets</span>
+          <span class="chip"><i class="art"><img src="assets/img/logos/word.png" alt="" width="19" height="19"></i>Word</span>
+        </div>
+      </div>
+      <div class="stackrow">
+        <span class="label">Design</span>
+        <div class="items">
+          <span class="chip"><i style="background:#F24E1E"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M15.852 8.981h-4.588V0h4.588c2.476 0 4.49 2.014 4.49 4.49s-2.014 4.491-4.49 4.491zM12.735 7.51h3.117c1.665 0 3.019-1.355 3.019-3.019s-1.355-3.019-3.019-3.019h-3.117V7.51zm0 1.471H8.148c-2.476 0-4.49-2.014-4.49-4.49S5.672 0 8.148 0h4.588v8.981zm-4.587-7.51c-1.665 0-3.019 1.355-3.019 3.019s1.354 3.02 3.019 3.02h3.117V1.471H8.148zm4.587 15.019H8.148c-2.476 0-4.49-2.014-4.49-4.49s2.014-4.49 4.49-4.49h4.588v8.98zM8.148 8.981c-1.665 0-3.019 1.355-3.019 3.019s1.355 3.019 3.019 3.019h3.117V8.981H8.148zM8.172 24c-2.489 0-4.515-2.014-4.515-4.49s2.014-4.49 4.49-4.49h4.588v4.441c0 2.503-2.047 4.539-4.563 4.539zm-.024-7.51a3.023 3.023 0 0 0-3.019 3.019c0 1.665 1.365 3.019 3.044 3.019 1.705 0 3.093-1.376 3.093-3.068v-2.97H8.148zm7.704 0h-.098c-2.476 0-4.49-2.014-4.49-4.49s2.014-4.49 4.49-4.49h.098c2.476 0 4.49 2.014 4.49 4.49s-2.014 4.49-4.49 4.49zm-.097-7.509c-1.665 0-3.019 1.355-3.019 3.019s1.355 3.019 3.019 3.019h.098c1.665 0 3.019-1.355 3.019-3.019s-1.355-3.019-3.019-3.019h-.098z"/></svg></i>Figma</span>
+          <span class="chip"><i class="art"><img src="assets/img/logos/canva.png" alt="" width="19" height="19"></i>Canva</span>
+        </div>
+      </div>
+      <div class="stackrow">
+        <span class="label">AI tools</span>
+        <div class="items">
+          <span class="chip"><i style="background:#D97757"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m4.7144 15.9555 4.7174-2.6471.079-.2307-.079-.1275h-.2307l-.7893-.0486-2.6956-.0729-2.3375-.0971-2.2646-.1214-.5707-.1215-.5343-.7042.0546-.3522.4797-.3218.686.0608 1.5179.1032 2.2767.1578 1.6514.0972 2.4468.255h.3886l.0546-.1579-.1336-.0971-.1032-.0972L6.973 9.8356l-2.55-1.6879-1.3356-.9714-.7225-.4918-.3643-.4614-.1578-1.0078.6557-.7225.8803.0607.2246.0607.8925.686 1.9064 1.4754 2.4893 1.8336.3643.3035.1457-.1032.0182-.0728-.164-.2733-1.3539-2.4467-1.445-2.4893-.6435-1.032-.17-.6194c-.0607-.255-.1032-.4674-.1032-.7285L6.287.1335 6.6997 0l.9957.1336.419.3642.6192 1.4147 1.0018 2.2282 1.5543 3.0296.4553.8985.2429.8318.091.255h.1579v-.1457l.1275-1.706.2368-2.0947.2307-2.6957.0789-.7589.3764-.9107.7468-.4918.5828.2793.4797.686-.0668.4433-.2853 1.8517-.5586 2.9021-.3643 1.9429h.2125l.2429-.2429.9835-1.3053 1.6514-2.0643.7286-.8196.85-.9046.5464-.4311h1.0321l.759 1.1293-.34 1.1657-1.0625 1.3478-.8804 1.1414-1.2628 1.7-.7893 1.36.0729.1093.1882-.0183 2.8535-.607 1.5421-.2794 1.8396-.3157.8318.3886.091.3946-.3278.8075-1.967.4857-2.3072.4614-3.4364.8136-.0425.0304.0486.0607 1.5482.1457.6618.0364h1.621l3.0175.2247.7892.522.4736.6376-.079.4857-1.2142.6193-1.6393-.3886-3.825-.9107-1.3113-.3279h-.1822v.1093l1.0929 1.0686 2.0035 1.8092 2.5075 2.3314.1275.5768-.3218.4554-.34-.0486-2.2039-1.6575-.85-.7468-1.9246-1.621h-.1275v.17l.4432.6496 2.3436 3.5214.1214 1.0807-.17.3521-.6071.2125-.6679-.1214-1.3721-1.9246L14.38 17.959l-1.1414-1.9428-.1397.079-.674 7.2552-.3156.3703-.7286.2793-.6071-.4614-.3218-.7468.3218-1.4753.3886-1.9246.3157-1.53.2853-1.9004.17-.6314-.0121-.0425-.1397.0182-1.4328 1.9672-2.1796 2.9446-1.7243 1.8456-.4128.164-.7164-.3704.0667-.6618.4008-.5889 2.386-3.0357 1.4389-1.882.929-1.0868-.0062-.1579h-.0546l-6.3385 4.1164-1.1293.1457-.4857-.4554.0608-.7467.2307-.2429 1.9064-1.3114Z"/></svg></i>Claude</span>
+          <span class="chip"><i class="tile-ink"><span class="msk" style="-webkit-mask-image:url(assets/img/logos/chatgpt-mark.png);mask-image:url(assets/img/logos/chatgpt-mark.png)"></span></i>ChatGPT</span>
+          <span class="chip"><i style="background:#8E75B2"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M11.04 19.32Q12 21.51 12 24q0-2.49.93-4.68.96-2.19 2.58-3.81t3.81-2.55Q21.51 12 24 12q-2.49 0-4.68-.93a12.3 12.3 0 0 1-3.81-2.58 12.3 12.3 0 0 1-2.58-3.81Q12 2.49 12 0q0 2.49-.96 4.68-.93 2.19-2.55 3.81a12.3 12.3 0 0 1-3.81 2.58Q2.49 12 0 12q2.49 0 4.68.96 2.19.93 3.81 2.55t2.55 3.81"/></svg></i>Gemini</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="work">
+  <div class="wrap">
+    <p class="eyebrow">Projects</p>
+    <div class="projects">
+      <div class="featured">
+        <div class="art"><canvas id="art" width="600" height="480" aria-hidden="true"></canvas></div>
+        <div class="body">
+          <h3>Budget Tracker</h3>
+          <p>A personal finance app — expense tracking, budgets, savings goals and recurring transactions, with six months of seeded history so a demo account opens with something to look at. React and TypeScript on the front, a Laravel 12 REST API and MySQL behind it, the whole thing brought up with Docker Compose.</p>
+          <p>Money is stored as integer minor units rather than floats, so rounding can&rsquo;t drift. Edits to a past transaction revert and re-apply rather than patching a balance in place. 42 endpoints, and 145 backend tests covering them.</p>
+          <div class="stack">
+            <span class="tag">React</span>
+            <span class="tag">TypeScript</span>
+            <span class="tag">Laravel</span>
+            <span class="tag">MySQL</span>
+            <span class="tag">Docker</span>
+          </div>
+          <a class="verify" href="https://github.com/allendrjs/budgetTracker" target="_blank" rel="noopener">View repository</a>
+        </div>
+      </div>
+
+      <div class="featured">
+        <div class="art"><canvas id="art3" width="600" height="480" aria-hidden="true"></canvas></div>
+        <div class="body">
+          <h3>NBA Game Outcome &amp; Score Predictor</h3>
+          <p>Random forest models that pick the winner and the final score of an NBA game from team stats available before tipoff — season and last-ten form, home/away splits, strength of schedule, streaks, rest days, head-to-head. Trained on 2,268 games across the 2023&ndash;26 seasons.</p>
+          <p>74.4% accuracy on the winner against a 54.9% baseline, and a mean error of about 9.6 points on the score. The train/test split is chronological rather than random, so the model is never scored on games it could have learned from. Ships as a self-contained HTML dashboard that runs with no server.</p>
+          <div class="stack">
+            <span class="tag">Python</span>
+            <span class="tag">scikit-learn</span>
+            <span class="tag">pandas</span>
+            <span class="tag">Jupyter</span>
+          </div>
+          <a class="verify" href="https://github.com/allendrjs/NBA" target="_blank" rel="noopener">View repository</a>
+        </div>
+      </div>
+
+      <div class="featured">
+        <div class="art"><canvas id="art2" width="600" height="480" aria-hidden="true"></canvas></div>
+        <div class="body">
+          <h3>RC-OSD Mobile</h3>
+          <p>The Android client for my thesis system — a mobile app and a web app sharing one backend. Written in Kotlin. I&rsquo;m Scrum Master and Product Owner on it as well as writing code and testing.</p>
+          <div class="stack">
+            <span class="tag">Kotlin</span>
+            <span class="tag">Android Studio</span>
+          </div>
+          <a class="verify" href="https://github.com/bsit5012025/rc-osd-mobile" target="_blank" rel="noopener">View repository</a>
+        </div>
+      </div>
+    </div>
+
+      <div class="ghblock">
+        <p class="eyebrow" style="margin-bottom:10px">GitHub activity</p>
+        <p class="ghstat"><strong>177 contributions</strong> in the last year · 53 active days · busiest day 15</p>
+        <div class="ghscroll">
+<svg class="ghgrid" viewBox="0 0 768 138" role="img" aria-label="GitHub contribution calendar, 177 contributions in the last year">
+<rect x="26" y="18" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="26" y="32" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="26" y="46" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="26" y="60" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="26" y="74" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="26" y="88" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="26" y="102" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="40" y="18" width="11" height="11" rx="2.5" class="lv0"></rect>
+<text class="ghlab" x="40" y="12">Sep</text>
+<rect x="40" y="32" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="40" y="46" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="40" y="60" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="40" y="74" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="40" y="88" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="40" y="102" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="54" y="18" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="54" y="32" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="54" y="46" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="54" y="60" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="54" y="74" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="54" y="88" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="54" y="102" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="68" y="18" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="68" y="32" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="68" y="46" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="68" y="60" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="68" y="74" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="68" y="88" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="68" y="102" width="11" height="11" rx="2.5" class="lv1"></rect>
+<rect x="82" y="18" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="82" y="32" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="82" y="46" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="82" y="60" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="82" y="74" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="82" y="88" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="82" y="102" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="96" y="18" width="11" height="11" rx="2.5" class="lv0"></rect>
+<text class="ghlab" x="96" y="12">Oct</text>
+<rect x="96" y="32" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="96" y="46" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="96" y="60" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="96" y="74" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="96" y="88" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="96" y="102" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="110" y="18" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="110" y="32" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="110" y="46" width="11" height="11" rx="2.5" class="lv1"></rect>
+<rect x="110" y="60" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="110" y="74" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="110" y="88" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="110" y="102" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="124" y="18" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="124" y="32" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="124" y="46" width="11" height="11" rx="2.5" class="lv1"></rect>
+<rect x="124" y="60" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="124" y="74" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="124" y="88" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="124" y="102" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="138" y="18" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="138" y="32" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="138" y="46" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="138" y="60" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="138" y="74" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="138" y="88" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="138" y="102" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="152" y="18" width="11" height="11" rx="2.5" class="lv0"></rect>
+<text class="ghlab" x="152" y="12">Nov</text>
+<rect x="152" y="32" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="152" y="46" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="152" y="60" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="152" y="74" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="152" y="88" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="152" y="102" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="166" y="18" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="166" y="32" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="166" y="46" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="166" y="60" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="166" y="74" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="166" y="88" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="166" y="102" width="11" height="11" rx="2.5" class="lv1"></rect>
+<rect x="180" y="18" width="11" height="11" rx="2.5" class="lv1"></rect>
+<rect x="180" y="32" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="180" y="46" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="180" y="60" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="180" y="74" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="180" y="88" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="180" y="102" width="11" height="11" rx="2.5" class="lv1"></rect>
+<rect x="194" y="18" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="194" y="32" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="194" y="46" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="194" y="60" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="194" y="74" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="194" y="88" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="194" y="102" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="208" y="18" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="208" y="32" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="208" y="46" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="208" y="60" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="208" y="74" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="208" y="88" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="208" y="102" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="222" y="18" width="11" height="11" rx="2.5" class="lv0"></rect>
+<text class="ghlab" x="222" y="12">Dec</text>
+<rect x="222" y="32" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="222" y="46" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="222" y="60" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="222" y="74" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="222" y="88" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="222" y="102" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="236" y="18" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="236" y="32" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="236" y="46" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="236" y="60" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="236" y="74" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="236" y="88" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="236" y="102" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="250" y="18" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="250" y="32" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="250" y="46" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="250" y="60" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="250" y="74" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="250" y="88" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="250" y="102" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="264" y="18" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="264" y="32" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="264" y="46" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="264" y="60" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="264" y="74" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="264" y="88" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="264" y="102" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="278" y="18" width="11" height="11" rx="2.5" class="lv0"></rect>
+<text class="ghlab" x="278" y="12">Jan</text>
+<rect x="278" y="32" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="278" y="46" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="278" y="60" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="278" y="74" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="278" y="88" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="278" y="102" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="292" y="18" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="292" y="32" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="292" y="46" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="292" y="60" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="292" y="74" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="292" y="88" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="292" y="102" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="306" y="18" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="306" y="32" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="306" y="46" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="306" y="60" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="306" y="74" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="306" y="88" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="306" y="102" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="320" y="18" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="320" y="32" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="320" y="46" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="320" y="60" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="320" y="74" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="320" y="88" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="320" y="102" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="334" y="18" width="11" height="11" rx="2.5" class="lv0"></rect>
+<text class="ghlab" x="334" y="12">Feb</text>
+<rect x="334" y="32" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="334" y="46" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="334" y="60" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="334" y="74" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="334" y="88" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="334" y="102" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="348" y="18" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="348" y="32" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="348" y="46" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="348" y="60" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="348" y="74" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="348" y="88" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="348" y="102" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="362" y="18" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="362" y="32" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="362" y="46" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="362" y="60" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="362" y="74" width="11" height="11" rx="2.5" class="lv1"></rect>
+<rect x="362" y="88" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="362" y="102" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="376" y="18" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="376" y="32" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="376" y="46" width="11" height="11" rx="2.5" class="lv1"></rect>
+<rect x="376" y="60" width="11" height="11" rx="2.5" class="lv3"></rect>
+<rect x="376" y="74" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="376" y="88" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="376" y="102" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="390" y="18" width="11" height="11" rx="2.5" class="lv0"></rect>
+<text class="ghlab" x="390" y="12">Mar</text>
+<rect x="390" y="32" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="390" y="46" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="390" y="60" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="390" y="74" width="11" height="11" rx="2.5" class="lv1"></rect>
+<rect x="390" y="88" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="390" y="102" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="404" y="18" width="11" height="11" rx="2.5" class="lv1"></rect>
+<rect x="404" y="32" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="404" y="46" width="11" height="11" rx="2.5" class="lv1"></rect>
+<rect x="404" y="60" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="404" y="74" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="404" y="88" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="404" y="102" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="418" y="18" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="418" y="32" width="11" height="11" rx="2.5" class="lv1"></rect>
+<rect x="418" y="46" width="11" height="11" rx="2.5" class="lv1"></rect>
+<rect x="418" y="60" width="11" height="11" rx="2.5" class="lv2"></rect>
+<rect x="418" y="74" width="11" height="11" rx="2.5" class="lv1"></rect>
+<rect x="418" y="88" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="418" y="102" width="11" height="11" rx="2.5" class="lv1"></rect>
+<rect x="432" y="18" width="11" height="11" rx="2.5" class="lv1"></rect>
+<rect x="432" y="32" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="432" y="46" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="432" y="60" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="432" y="74" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="432" y="88" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="432" y="102" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="446" y="18" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="446" y="32" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="446" y="46" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="446" y="60" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="446" y="74" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="446" y="88" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="446" y="102" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="460" y="18" width="11" height="11" rx="2.5" class="lv0"></rect>
+<text class="ghlab" x="460" y="12">Apr</text>
+<rect x="460" y="32" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="460" y="46" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="460" y="60" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="460" y="74" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="460" y="88" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="460" y="102" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="474" y="18" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="474" y="32" width="11" height="11" rx="2.5" class="lv1"></rect>
+<rect x="474" y="46" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="474" y="60" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="474" y="74" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="474" y="88" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="474" y="102" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="488" y="18" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="488" y="32" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="488" y="46" width="11" height="11" rx="2.5" class="lv1"></rect>
+<rect x="488" y="60" width="11" height="11" rx="2.5" class="lv1"></rect>
+<rect x="488" y="74" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="488" y="88" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="488" y="102" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="502" y="18" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="502" y="32" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="502" y="46" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="502" y="60" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="502" y="74" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="502" y="88" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="502" y="102" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="516" y="18" width="11" height="11" rx="2.5" class="lv1"></rect>
+<text class="ghlab" x="516" y="12">May</text>
+<rect x="516" y="32" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="516" y="46" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="516" y="60" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="516" y="74" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="516" y="88" width="11" height="11" rx="2.5" class="lv1"></rect>
+<rect x="516" y="102" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="530" y="18" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="530" y="32" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="530" y="46" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="530" y="60" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="530" y="74" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="530" y="88" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="530" y="102" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="544" y="18" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="544" y="32" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="544" y="46" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="544" y="60" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="544" y="74" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="544" y="88" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="544" y="102" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="558" y="18" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="558" y="32" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="558" y="46" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="558" y="60" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="558" y="74" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="558" y="88" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="558" y="102" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="572" y="18" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="572" y="32" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="572" y="46" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="572" y="60" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="572" y="74" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="572" y="88" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="572" y="102" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="586" y="18" width="11" height="11" rx="2.5" class="lv0"></rect>
+<text class="ghlab" x="586" y="12">Jun</text>
+<rect x="586" y="32" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="586" y="46" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="586" y="60" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="586" y="74" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="586" y="88" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="586" y="102" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="600" y="18" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="600" y="32" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="600" y="46" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="600" y="60" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="600" y="74" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="600" y="88" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="600" y="102" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="614" y="18" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="614" y="32" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="614" y="46" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="614" y="60" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="614" y="74" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="614" y="88" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="614" y="102" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="628" y="18" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="628" y="32" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="628" y="46" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="628" y="60" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="628" y="74" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="628" y="88" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="628" y="102" width="11" height="11" rx="2.5" class="lv2"></rect>
+<rect x="642" y="18" width="11" height="11" rx="2.5" class="lv0"></rect>
+<text class="ghlab" x="642" y="12">Jul</text>
+<rect x="642" y="32" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="642" y="46" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="642" y="60" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="642" y="74" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="642" y="88" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="642" y="102" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="656" y="18" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="656" y="32" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="656" y="46" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="656" y="60" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="656" y="74" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="656" y="88" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="656" y="102" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="670" y="18" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="670" y="32" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="670" y="46" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="670" y="60" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="670" y="74" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="670" y="88" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="670" y="102" width="11" height="11" rx="2.5" class="lv1"></rect>
+<rect x="684" y="18" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="684" y="32" width="11" height="11" rx="2.5" class="lv1"></rect>
+<rect x="684" y="46" width="11" height="11" rx="2.5" class="lv1"></rect>
+<rect x="684" y="60" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="684" y="74" width="11" height="11" rx="2.5" class="lv1"></rect>
+<rect x="684" y="88" width="11" height="11" rx="2.5" class="lv4"></rect>
+<rect x="684" y="102" width="11" height="11" rx="2.5" class="lv1"></rect>
+<rect x="698" y="18" width="11" height="11" rx="2.5" class="lv0"></rect>
+<text class="ghlab" x="698" y="12">Aug</text>
+<rect x="698" y="32" width="11" height="11" rx="2.5" class="lv2"></rect>
+<rect x="698" y="46" width="11" height="11" rx="2.5" class="lv1"></rect>
+<rect x="698" y="60" width="11" height="11" rx="2.5" class="lv2"></rect>
+<rect x="698" y="74" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="698" y="88" width="11" height="11" rx="2.5" class="lv2"></rect>
+<rect x="698" y="102" width="11" height="11" rx="2.5" class="lv1"></rect>
+<rect x="712" y="18" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="712" y="32" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="712" y="46" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="712" y="60" width="11" height="11" rx="2.5" class="lv1"></rect>
+<rect x="712" y="74" width="11" height="11" rx="2.5" class="lv2"></rect>
+<rect x="712" y="88" width="11" height="11" rx="2.5" class="lv4"></rect>
+<rect x="712" y="102" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="726" y="18" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="726" y="32" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="726" y="46" width="11" height="11" rx="2.5" class="lv1"></rect>
+<rect x="726" y="60" width="11" height="11" rx="2.5" class="lv2"></rect>
+<rect x="726" y="74" width="11" height="11" rx="2.5" class="lv1"></rect>
+<rect x="726" y="88" width="11" height="11" rx="2.5" class="lv1"></rect>
+<rect x="726" y="102" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="740" y="18" width="11" height="11" rx="2.5" class="lv0"></rect>
+<rect x="740" y="32" width="11" height="11" rx="2.5" class="lv1"></rect>
+<rect x="740" y="46" width="11" height="11" rx="2.5" class="lv1"></rect>
+<rect x="740" y="60" width="11" height="11" rx="2.5" class="lv2"></rect>
+<rect x="740" y="74" width="11" height="11" rx="2.5" class="lv4"></rect>
+<rect x="740" y="88" width="11" height="11" rx="2.5" class="lv1"></rect>
+<rect x="740" y="102" width="11" height="11" rx="2.5" class="lv3"></rect>
+<rect x="754" y="18" width="11" height="11" rx="2.5" class="lv2"></rect>
+<rect x="754" y="32" width="11" height="11" rx="2.5" class="lv1"></rect>
+<rect x="754" y="46" width="11" height="11" rx="2.5" class="lv1"></rect>
+<rect x="754" y="60" width="11" height="11" rx="2.5" class="lv3"></rect>
+<rect x="754" y="74" width="11" height="11" rx="2.5" class="lv1"></rect>
+<rect x="754" y="88" width="11" height="11" rx="2.5" class="lv0"></rect>
+<text class="ghlab" x="0" y="41">Mon</text>
+<text class="ghlab" x="0" y="69">Wed</text>
+<text class="ghlab" x="0" y="97">Fri</text>
+<text class="ghlab" x="26" y="132">Less</text>
+<rect x="58" y="123" width="11" height="11" rx="2.5" class="lv0"/>
+<rect x="72" y="123" width="11" height="11" rx="2.5" class="lv1"/>
+<rect x="86" y="123" width="11" height="11" rx="2.5" class="lv2"/>
+<rect x="100" y="123" width="11" height="11" rx="2.5" class="lv3"/>
+<rect x="114" y="123" width="11" height="11" rx="2.5" class="lv4"/>
+<text class="ghlab" x="132" y="132">More</text>
+</svg>
+        </div>
+        <p class="ghfoot">Snapshot taken 4 September 2026 · <a href="https://github.com/allendrjs" target="_blank" rel="noopener">github.com/allendrjs</a></p>
+      </div>
+  </div>
+</section>
+
+<section id="design">
+  <div class="wrap">
+    <p class="eyebrow">Design</p>
+    <p class="note">Graphic work, email layouts and interface wireframes. Click any piece to see it full size.</p>
+
+    <div class="dfilters" role="group" aria-label="Filter design work">
+      <button type="button" class="dfilter" data-filter="all" aria-pressed="true">All</button>
+      <button type="button" class="dfilter" data-filter="graphic" aria-pressed="false">Graphic</button>
+      <button type="button" class="dfilter" data-filter="email" aria-pressed="false">Email</button>
+      <button type="button" class="dfilter" data-filter="ui" aria-pressed="false">UI wireframes</button>
+    </div>
+
+    <div class="dgrid" id="dgrid">
+      <figure class="dtile" data-cat="graphic">
+        <div class="dshot" style="aspect-ratio:4 / 3"><span>Graphic</span><em>add artwork</em></div>
+        <figcaption class="todo">Title &amp; one line about it</figcaption>
+      </figure>
+      <figure class="dtile" data-cat="graphic">
+        <div class="dshot" style="aspect-ratio:1 / 1"><span>Graphic</span><em>add artwork</em></div>
+        <figcaption class="todo">Title &amp; one line about it</figcaption>
+      </figure>
+      <figure class="dtile" data-cat="email">
+        <div class="dshot" style="aspect-ratio:3 / 4"><span>Email</span><em>add artwork</em></div>
+        <figcaption class="todo">Title &amp; one line about it</figcaption>
+      </figure>
+      <figure class="dtile" data-cat="email">
+        <div class="dshot" style="aspect-ratio:3 / 4"><span>Email</span><em>add artwork</em></div>
+        <figcaption class="todo">Title &amp; one line about it</figcaption>
+      </figure>
+      <figure class="dtile" data-cat="ui">
+        <div class="dshot" style="aspect-ratio:16 / 10"><span>UI wireframe</span><em>add artwork</em></div>
+        <figcaption class="todo">Title &amp; one line about it</figcaption>
+      </figure>
+      <figure class="dtile" data-cat="ui">
+        <div class="dshot" style="aspect-ratio:16 / 10"><span>UI wireframe</span><em>add artwork</em></div>
+        <figcaption class="todo">Title &amp; one line about it</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="wrap">
+    <p class="eyebrow">Experience</p>
+    <div class="exp">
+      <div class="exp-item">
+        <div class="when">2026 — Present</div>
+        <div>
+          <h3>Scrum Master, Product Owner, Developer &amp; Tester</h3>
+          <p class="where">Thesis project · Rogationist College Silang</p>
+          <p>Four hats across two teams building one product — a mobile client and a web client on a shared backend. Running the ceremonies, owning the backlog and release order, writing code across the backend and both clients, and testing what the teams shipped before it reached anyone else.</p>
+        </div>
+      </div>
+      <div class="exp-item">
+        <div class="when">2025 — Present</div>
+        <div>
+          <h3>Product Owner &amp; Business Analyst</h3>
+          <p class="where">Desktop application · Final school project · Rogationist College Silang</p>
+          <p>Owning the backlog and the requirements for the course&rsquo;s final output — turning what the project needed into scoped, buildable stories, and deciding what ships in which order.</p>
+        </div>
+      </div>
+    </div>
+    </div>
+  </div>
+</section>
+
+<section id="certificates">
+  <div class="wrap">
+    <p class="eyebrow">Certificates</p>
+    <p class="note">Eleven certifications, all earned in July 2026. Every card shows the certificate itself; links go to the issuer for verification.</p>
+    <div class="certgrid">
+      <article class="certcard">
+        <div class="cover">
+          <img src="assets/img/certs/tableau-desktop-specialist-data-analyst-cert.jpg" alt="Certificate: Tableau Desktop Specialist + Data Analyst Certification" loading="lazy">
+        </div>
+        <div class="cbody">
+          <h3>Tableau Desktop Specialist + Data Analyst Certification</h3>
+          <p class="cmeta">Udemy · 28 Jul 2026</p>
+          <p class="cdesc">Dashboard design and calculated fields, built around the Desktop Specialist exam. 10 hours.</p>
+          <div class="stack"><span class="tag">Data Visualization</span><span class="tag">Data Analysis</span></div>
+          <a class="verify" href="https://ude.my/UC-2455b5db-45fe-4a10-a0f8-38568ababc7b" target="_blank" rel="noopener">Verify credential</a>
+        </div>
+      </article>
+      <article class="certcard">
+        <div class="cover">
+          <img src="assets/img/certs/data-analyst-professional-certificate-in-dat.jpg" alt="Certificate: Data Analyst: Professional Certificate in Data Analysis" loading="lazy">
+        </div>
+        <div class="cbody">
+          <h3>Data Analyst: Professional Certificate in Data Analysis</h3>
+          <p class="cmeta">Udemy · 14 Jul 2026</p>
+          <p class="cdesc">The full analysis workflow from MTF Institute — cleaning, exploring, reporting. 38.5 hours.</p>
+          <div class="stack"><span class="tag">Data Analysis</span><span class="tag">Data Analytics</span></div>
+          <a class="verify" href="https://ude.my/UC-ebffd881-b711-46f8-9b05-63e26150e12e" target="_blank" rel="noopener">Verify credential</a>
+        </div>
+      </article>
+      <article class="certcard">
+        <div class="cover">
+          <img src="assets/img/certs/python-for-data-analysis-and-business-intell.jpg" alt="Certificate: Python for Data Analysis and Business Intelligence" loading="lazy">
+        </div>
+        <div class="cbody">
+          <h3>Python for Data Analysis &amp; Business Intelligence</h3>
+          <p class="cmeta">Udemy · 28 Jul 2026</p>
+          <p class="cdesc">pandas and aggregation with Maven Analytics — turning raw output into BI-ready summaries. 11.5 hours.</p>
+          <div class="stack"><span class="tag">Python</span><span class="tag">Business Intelligence</span></div>
+          <a class="verify" href="https://ude.my/UC-c563df39-d62d-429b-b1c6-5cd706304f93" target="_blank" rel="noopener">Verify credential</a>
+        </div>
+      </article>
+      <article class="certcard">
+        <div class="cover">
+          <img src="assets/img/certs/microsoft-excel-beginner-to-advanced.jpg" alt="Certificate: Microsoft Excel — Beginner to Advanced" loading="lazy">
+        </div>
+        <div class="cbody">
+          <h3>Microsoft Excel — Beginner to Advanced</h3>
+          <p class="cmeta">Udemy · 30 Jul 2026</p>
+          <p class="cdesc">Pivot tables, lookups, and modelling well past what most spreadsheets ask for. 22.5 hours.</p>
+          <div class="stack"><span class="tag">Excel</span><span class="tag">Pivot Tables</span></div>
+          <a class="verify" href="https://ude.my/UC-f19e2814-990f-4ad8-8c45-53b9c48c0190" target="_blank" rel="noopener">Verify credential</a>
+        </div>
+      </article>
+      <article class="certcard">
+        <div class="cover">
+          <img src="assets/img/certs/the-complete-2026-software-testing-bootcamp.jpg" alt="Certificate: The Complete 2026 Software Testing Bootcamp" loading="lazy">
+        </div>
+        <div class="cbody">
+          <h3>The Complete 2026 Software Testing Bootcamp</h3>
+          <p class="cmeta">Udemy · 25 Jul 2026</p>
+          <p class="cdesc">Manual testing, test case design, and QA process from the tester&rsquo;s seat. 42.5 hours.</p>
+          <div class="stack"><span class="tag">Manual Testing</span><span class="tag">QA</span></div>
+          <a class="verify" href="https://ude.my/UC-70e923bc-4d9a-481e-9934-1be662541133" target="_blank" rel="noopener">Verify credential</a>
+        </div>
+      </article>
+      <article class="certcard">
+        <div class="cover">
+          <img src="assets/img/certs/figma-ui-ux-design-essentials.jpg" alt="Certificate: Figma UI/UX Design Essentials" loading="lazy">
+        </div>
+        <div class="cbody">
+          <h3>Figma UI/UX Design Essentials</h3>
+          <p class="cmeta">Udemy · 7 Jul 2026</p>
+          <p class="cdesc">Interface layout, components, and prototyping in Figma. 9.5 hours.</p>
+          <div class="stack"><span class="tag">UI Design</span><span class="tag">UX Design</span></div>
+          <a class="verify" href="https://ude.my/UC-e4ecbe36-313d-45e3-bdd7-edfcfa3cb534" target="_blank" rel="noopener">Verify credential</a>
+        </div>
+      </article>
+      <article class="certcard">
+        <div class="cover">
+          <img src="assets/img/certs/the-complete-claude-code-and-claude-cowork-m.jpg" alt="Certificate: The Complete Claude Code and Claude Cowork Masterclass" loading="lazy">
+        </div>
+        <div class="cbody">
+          <h3>The Complete Claude Code &amp; Claude Cowork Masterclass</h3>
+          <p class="cmeta">Udemy · 23 Jul 2026</p>
+          <p class="cdesc">Agentic coding workflows — delegating real build tasks to an AI agent. 22 hours.</p>
+          <div class="stack"><span class="tag">AI Agents</span><span class="tag">Artificial Intelligence</span></div>
+          <a class="verify" href="https://ude.my/UC-eef77dba-562b-4397-aa6e-5b5cf5bdb53d" target="_blank" rel="noopener">Verify credential</a>
+        </div>
+      </article>
+      <article class="certcard">
+        <div class="cover">
+          <img src="assets/img/certs/claude-code-101.jpg" alt="Certificate: Claude Code 101" loading="lazy">
+        </div>
+        <div class="cbody">
+          <h3>Claude Code 101</h3>
+          <p class="cmeta">Anthropic · Jul 2026</p>
+          <p class="cdesc">Anthropic&rsquo;s own introduction to agentic coding with Claude Code.</p>
+          <div class="stack"><span class="tag">AI Agents</span></div>
+          <span class="verify muted">Issued directly by Anthropic</span>
+        </div>
+      </article>
+      <article class="certcard">
+        <div class="cover">
+          <img src="assets/img/certs/claude-101.jpg" alt="Certificate: Claude 101" loading="lazy">
+        </div>
+        <div class="cbody">
+          <h3>Claude 101</h3>
+          <p class="cmeta">Anthropic · Jul 2026</p>
+          <p class="cdesc">Anthropic&rsquo;s foundational course on working effectively with Claude.</p>
+          <div class="stack"><span class="tag">Artificial Intelligence</span></div>
+          <span class="verify muted">Issued directly by Anthropic</span>
+        </div>
+      </article>
+      <article class="certcard">
+        <div class="cover">
+          <img src="assets/img/certs/ai-literacy.jpg" alt="Certificate: AI Literacy" loading="lazy">
+        </div>
+        <div class="cbody">
+          <h3>AI Literacy</h3>
+          <p class="cmeta">IBM SkillsBuild · 9 Jul 2026</p>
+          <p class="cdesc">Core AI concepts, practical capabilities, and where the limits sit.</p>
+          <div class="stack"><span class="tag">Artificial Intelligence</span></div>
+          <a class="verify" href="https://www.credly.com/badges/7d620858-ec56-48d3-89c6-20d65ee278e1" target="_blank" rel="noopener">Verify credential</a>
+        </div>
+      </article>
+      <article class="certcard">
+        <div class="cover">
+          <img src="assets/img/certs/artificial-intelligence-fundamentals.jpg" alt="Certificate: Artificial Intelligence Fundamentals" loading="lazy">
+        </div>
+        <div class="cbody">
+          <h3>Artificial Intelligence Fundamentals</h3>
+          <p class="cmeta">IBM SkillsBuild · 8 Jul 2026</p>
+          <p class="cdesc">Foundations of machine learning, model behaviour, and responsible AI use.</p>
+          <div class="stack"><span class="tag">Artificial Intelligence</span></div>
+          <a class="verify" href="https://www.credly.com/badges/6697596e-d23b-4659-a9b5-39afb1bf23ca" target="_blank" rel="noopener">Verify credential</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap">
+    <p class="eyebrow">Outside the computer</p>
+    <p class="lead lead-solo">Away from a desk I&rsquo;m usually outside — on a bike, on a run, or partway up something.</p>
+
+    <div class="carousel" id="carousel" tabindex="0" role="group" aria-label="Photos, use arrow keys or swipe">
+      <div class="cwindow">
+        <div class="ctrack" id="ctrack">
+
+          <figure class="cslide">
+            <div class="cphoto"><span>Biking</span><em>add a photo</em></div>
+            <figcaption>
+              <h3>Biking</h3>
+              <p>Long rides where the only plan is to go a bit further than last time. Half the appeal is the roads you find by accident on the way back.</p>
+            </figcaption>
+          </figure>
+
+          <figure class="cslide">
+            <div class="cphoto"><span>Running</span><em>add a photo</em></div>
+            <figcaption>
+              <h3>Running</h3>
+              <p>The simplest of the three — no gear, no excuses, nowhere to hide. Pick a distance slightly past comfortable and find out what you&rsquo;re like near the end of it.</p>
+            </figcaption>
+          </figure>
+
+          <figure class="cslide">
+            <div class="cphoto"><span>Hiking</span><em>add a photo</em></div>
+            <figcaption>
+              <h3>Hiking</h3>
+              <p>What I&rsquo;d pick on a free weekend. The view at the top is a better reward than a finishing time, and nobody&rsquo;s holding a stopwatch.</p>
+            </figcaption>
+          </figure>
+
+          <figure class="cslide">
+            <div class="cphoto"><span>Gaming</span><em>add a photo</em></div>
+            <figcaption>
+              <h3>Gaming</h3>
+              <p>Story games, mostly — Red Dead Redemption 2, GTA V, the God of War series, Spider-Man. The kind you finish and then miss for a week. NBA 2K is the exception: that one&rsquo;s for when I don&rsquo;t want a story, just a game.</p>
+            </figcaption>
+          </figure>
+
+          <figure class="cslide">
+            <div class="cphoto"><span>Music</span><em>add a photo</em></div>
+            <figcaption>
+              <h3>Music</h3>
+              <p class="todo">What&rsquo;s on while you ride or run — artists, a genre, or something you play yourself.</p>
+            </figcaption>
+          </figure>
+
+
+        </div>
+      </div>
+
+      <button class="carrow prev" id="cprev" type="button" aria-label="Previous photo">&#8249;</button>
+      <button class="carrow next" id="cnext" type="button" aria-label="Next photo">&#8250;</button>
+      <div class="cdots" id="cdots" aria-hidden="true"></div>
+    </div>
+
+
+    <p class="about-tail">It&rsquo;s the part of the week with no screen in it, which is probably exactly why I need it.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <h2>Let's build something.</h2>
+    <p>Open to full-stack work, backend engineering, and data and reporting projects that need someone who cares about what happens after launch.</p>
+    <div class="footlinks">
+      <a href="mailto:geo.villanueva.derojas@gmail.com">Email</a>
+      <a href="https://github.com/allendrjs" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://www.linkedin.com/in/geoffrey-allen-de-rojas-31b15441a/" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+
+    <div class="footmeta">
+      <div>
+        <p class="tagline">A little further than last time.</p>
+        <p class="byline">Geoffrey Allen De Rojas <span>/</span> BSIT student <span>/</span> Philippines</p>
+      </div>
+      <span class="visits" id="visits" hidden>Visited by <strong id="visitsCount">&mdash;</strong> people</span>
+    </div>
+  </div>
+</footer>
+
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Certificate">
+  <button class="close" type="button" id="lightboxClose">Close ✕</button>
+  <img id="lightboxImg" src="" alt="">
+</div>
+
+<a class="float" href="mailto:geo.villanueva.derojas@gmail.com">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 01-9 8.4 9 9 0 01-3.9-.9L3 20.5l1.6-4.6A8.4 8.4 0 013 11.5 8.4 8.4 0 0112 3a8.4 8.4 0 019 8.5z"/></svg>
+  Chat with Geo
+</a>
+
+<!-- Phase 3 -->
+<script src="assets/js/main.js" defer></script>
+</body>
+</html>

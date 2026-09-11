@@ -1,0 +1,16 @@
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editors
+.vscode/
+.idea/
+*.swp
+
+# Node (only if you later add a build step or serverless functions)
+node_modules/
+.env
+.env.local
+.vercel
+.netlify
