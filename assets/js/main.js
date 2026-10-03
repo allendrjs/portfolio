@@ -157,3 +157,110 @@
     }
     });
   })();
+  // Chatbot. Answers strictly from this page's own text, via the artifact's
+  // built-in Claude access. Hidden entirely when that is unavailable.
+  (function () {
+    var launch = document.getElementById('chatLaunch');
+    var panel  = document.getElementById('chatPanel');
+    if (!launch || !panel) return;
+
+    var log = document.getElementById('chatLog');
+    var form = document.getElementById('chatForm');
+    var input = document.getElementById('chatInput');
+    var send = document.getElementById('chatSend');
+    var chips = document.getElementById('chatChips');
+    var ask = null, busy = false, history = [];
+
+    panel.hidden = true;
+
+    if (!window.claude || !window.claude.use) { launch.hidden = true; return; }
+    claude.use('sample').then(function (s) {
+      if (!s) { launch.hidden = true; return; }
+      ask = s;
+    }).catch(function () { launch.hidden = true; });
+
+    function pageFacts() {
+      var ids = ['stack', 'work', 'design', 'experience', 'certificates', 'about'];
+      var parts = [document.querySelector('header .wrap').innerText];
+      ids.forEach(function (id) {
+        var el = document.getElementById(id);
+        if (el) parts.push(el.innerText);
+      });
+      return parts.join('\n\n').replace(/\n{3,}/g, '\n\n').slice(0, 9000);
+    }
+
+    function bubble(who, text) {
+      var d = document.createElement('div');
+      d.className = 'msg ' + who;
+      var p = document.createElement('p');
+      p.textContent = text;
+      d.appendChild(p);
+      log.appendChild(d);
+      log.scrollTop = log.scrollHeight;
+      return p;
+    }
+
+    function open(yes) {
+      panel.hidden = !yes;
+      launch.hidden = yes;
+      launch.setAttribute('aria-expanded', yes ? 'true' : 'false');
+      if (yes) input.focus();
+    }
+    launch.addEventListener('click', function () { open(true); });
+    document.getElementById('chatClose').addEventListener('click', function () { open(false); });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && !panel.hidden) open(false);
+    });
+
+    chips.addEventListener('click', function (e) {
+      var b = e.target.closest('button');
+      if (b) submit(b.dataset.q);
+    });
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      submit(input.value.trim());
+    });
+
+    function submit(text) {
+      if (!text || busy || !ask) return;
+      busy = true; send.disabled = true; chips.hidden = true;
+      input.value = '';
+      bubble('me', text);
+
+      var thinking = bubble('bot', 'Thinking…');
+      thinking.parentNode.classList.add('thinking');
+
+      var prompt =
+        'You answer visitor questions on the portfolio site of Geoffrey Allen De Rojas ' +
+        '(he goes by Geo). Use ONLY the page content below. If the page does not cover ' +
+        'the question, say so plainly and suggest emailing him — never guess or invent ' +
+        'anything about him. Refer to him in the third person; you are not Geo and must ' +
+        'not speak as him. Keep answers to two or three sentences, plain text, no markdown.\n\n' +
+        '=== PAGE CONTENT ===\n' + pageFacts() + '\n=== END ===\n\n' +
+        (history.length ? 'Earlier in this chat:\n' + history.slice(-4).join('\n') + '\n\n' : '') +
+        'Visitor question: ' + text;
+
+      ask(prompt, {
+        modelTier: 'quick',
+        onText: function (e) {
+          thinking.parentNode.classList.remove('thinking');
+          thinking.textContent = e.text;
+          log.scrollTop = log.scrollHeight;
+        }
+      }).then(function (r) {
+        thinking.parentNode.classList.remove('thinking');
+        thinking.textContent = r.text;
+        history.push('Q: ' + text, 'A: ' + r.text);
+        log.scrollTop = log.scrollHeight;
+      }).catch(function (err) {
+        thinking.parentNode.classList.remove('thinking');
+        var code = err && err.code;
+        thinking.textContent =
+          code === 'rate_limited' ? 'Too many questions at once — give it a minute.' :
+          code === 'not_granted'  ? 'Chat is unavailable in this view.' :
+          'Something went wrong. You can email Geo instead.';
+      }).then(function () {
+        busy = false; send.disabled = false; input.focus();
+      });
+    }
+  })();
