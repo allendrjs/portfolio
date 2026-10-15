@@ -9,9 +9,10 @@ Personal portfolio site. Plain HTML, CSS and JavaScript — no framework, no bui
 ```
 index.html                 the whole page
 assets/css/style.css       all styling, light + dark themes
-assets/js/main.js          theme toggle, carousel, lightbox, gallery filters
-assets/img/logos/          tech stack icons
-assets/img/certs/          certificate images
+assets/js/main.js          theme toggle, lightbox, gallery filters, featured artwork
+assets/img/media/          logos, certificate scans, design work, avatar
+assets/img/favicon.png     tab icon
+assets/img/og-card.png     link preview image
 ```
 
 ## Running it locally
@@ -34,22 +35,8 @@ Static files, so anywhere works. Vercel and Netlify both deploy on push:
 2. Import it at vercel.com or netlify.com
 3. Framework preset: **None / Other**. Build command: leave empty. Output: `.`
 
-## Visitor counter
-
-`assets/js/main.js` has an empty constant:
-
-```js
-var VISITOR_ENDPOINT = '';
-```
-
-Point it at any endpoint returning `{"count": 123}` and the pill in the footer
-appears. Leave it empty and nothing is shown — no invented numbers. On Vercel or
-Netlify this is a small serverless function.
-
 ## Still to do
 
-- [ ] Photos for the carousel in "Outside the computer"
-- [ ] Real pieces in the Design section (graphic / email / UI wireframes)
-- [ ] Music caption
 - [ ] Replace the intro paragraph with your own wording, then remove the preview banner
-- [ ] Refresh the GitHub contribution snapshot (currently 4 Sep 2026)
+- [ ] Pick one name — the tab title, the heading and the nav mark currently differ
+- [ ] Footer tagline is a leftover from the removed personal section
