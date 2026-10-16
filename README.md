@@ -2,7 +2,7 @@
 
 My personal portfolio. Plain HTML, CSS and JavaScript
 
-**Live:** _(add your URL once deployed)_
+**Live:** https://allendrjs.vercel.app
 
 ## Files
 
