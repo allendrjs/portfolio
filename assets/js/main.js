@@ -50,11 +50,6 @@
       if (e.key === 'Escape') closeLightbox();
     });
 
-    var notice = document.getElementById('notice');
-    document.getElementById('dismiss').addEventListener('click', function () {
-      notice.hidden = true;
-    });
-
     // Featured artwork: concentric contour field, drawn once.
     [['art', 1], ['art2', 1.7], ['art3', 2.4]].forEach(function (spec) {
     var c = document.getElementById(spec[0]);

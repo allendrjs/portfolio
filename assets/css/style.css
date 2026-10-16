@@ -60,21 +60,6 @@
 
   .wrap{width:100%;max-width:var(--col);margin:0 auto;padding:0 24px}
 
-  /* ---- preview strip ---- */
-  .notice{
-    background:var(--deep);color:var(--deep-ink);
-    font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;
-  }
-  :root[data-theme="dark"] .notice,
-  :root:not([data-theme="light"]) .notice{border-bottom:1px solid var(--line)}
-  .notice .wrap{display:flex;align-items:center;gap:12px;padding-top:9px;padding-bottom:9px}
-  .notice p{margin:0;flex:1;min-width:0}
-  .notice button{
-    background:none;border:1px solid rgba(255,255,255,.28);color:inherit;
-    font:inherit;letter-spacing:.08em;padding:2px 8px;border-radius:999px;cursor:pointer;
-  }
-  .notice button:hover{border-color:currentColor}
-
   /* ---- nav ---- */
   nav{
     position:sticky;top:0;z-index:50;
@@ -82,14 +67,28 @@
     backdrop-filter:saturate(180%) blur(12px);
     border-bottom:1px solid var(--line);
   }
-  nav .wrap{display:flex;align-items:center;gap:20px;height:56px}
-  .mark{font-weight:700;letter-spacing:.06em;font-size:14px}
-  .navlinks{margin-left:auto;display:flex;align-items:center;gap:22px}
+  nav .wrap{display:flex;align-items:center;gap:22px;height:56px}
+  .navlinks{margin-left:auto;display:flex;align-items:center;gap:22px;min-width:0}
+  /* phones: the links become a strip you can swipe; the toggle stays pinned */
+  @media (max-width:640px){
+    nav .wrap{gap:14px}
+    .navlinks{
+      margin-left:0;flex:1 1 auto;gap:18px;
+      overflow-x:auto;overscroll-behavior-x:contain;
+      -webkit-overflow-scrolling:touch;
+      scrollbar-width:none;-ms-overflow-style:none;
+      -webkit-mask-image:linear-gradient(90deg,#000 calc(100% - 26px),transparent);
+      mask-image:linear-gradient(90deg,#000 calc(100% - 26px),transparent);
+    }
+    .navlinks::-webkit-scrollbar{display:none}
+    .navlinks a{flex:none;white-space:nowrap}
+  }
   .navlinks a{
     font-size:13.5px;color:var(--ink-2);text-decoration:none;
   }
   .navlinks a:hover{color:var(--ink)}
   .toggle{
+    flex:none;
     width:30px;height:30px;display:grid;place-items:center;
     border:1px solid var(--line-2);border-radius:8px;background:transparent;
     color:var(--ink-2);cursor:pointer;
