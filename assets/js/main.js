@@ -50,30 +50,4 @@
       if (e.key === 'Escape') closeLightbox();
     });
 
-    // Featured artwork: concentric contour field, drawn once.
-    [['art', 1], ['art2', 1.7], ['art3', 2.4]].forEach(function (spec) {
-    var c = document.getElementById(spec[0]);
-    if (c && c.getContext) {
-      var ctx = c.getContext('2d');
-      var W = c.width, H = c.height;
-      ctx.fillStyle = '#0d0d0f';
-      ctx.fillRect(0, 0, W, H);
-      var cx = W * 0.52, cy = H * 0.5;
-      for (var r = 14; r < 340; r += 6) {
-        ctx.beginPath();
-        for (var a = 0; a <= Math.PI * 2 + 0.05; a += 0.05) {
-          var warp = Math.sin(a * 3 * spec[1] + r * 0.02) * (r * 0.11)
-                   + Math.sin(a * 5 * spec[1] - r * 0.035) * (r * 0.05);
-          var rad = r + warp;
-          var x = cx + Math.cos(a) * rad * 1.05;
-          var y = cy + Math.sin(a) * rad * 0.82;
-          if (a === 0) ctx.moveTo(x, y); else ctx.lineTo(x, y);
-        }
-        ctx.closePath();
-        ctx.strokeStyle = 'rgba(242,242,239,' + (0.30 - r / 1500).toFixed(3) + ')';
-        ctx.lineWidth = 1;
-        ctx.stroke();
-      }
-    }
-    });
   })();
