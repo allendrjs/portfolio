@@ -418,7 +418,6 @@
     margin-top:52px;padding-top:22px;border-top:1px solid var(--line);
     display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:16px;
   }
-  .tagline{margin:0 0 6px;font-style:italic;color:var(--muted);font-size:14.5px}
   .byline{margin:0;font-size:13.5px;color:var(--ink-2)}
   .byline span{color:var(--line-2);margin:0 6px}
 
